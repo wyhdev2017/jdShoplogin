@@ -50,15 +50,20 @@ Axios.interceptors.response.use(function (config) {
 // 导航钩子控制headerBarShow的显示隐藏
 router.beforeEach((to, from, next) => {
   NProgress.start()
-  //console.log(from.path+"  ;  "+from.meta)
-if (to.path === '/' || to.path === '/home') {
-    store.state.headerBarShow = true
-} else {
-    store.state.headerBarShow = false
-}
-
+ // console.log(from.path+"  ;  "+store.state.headerBarShow)
+  if(store.state.headerBarShow!=0){//判断是否登录
+			if (to.path === '/' || to.path === '/home') {
+			    store.state.headerBarShow = 1
+			} else {
+			    store.state.headerBarShow = 2
+			}
+			
+	}
   next()
-})
+ 
+	  
+	})
+
 router.afterEach((to, from) => {
   NProgress.done()
 })

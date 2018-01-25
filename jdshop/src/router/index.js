@@ -7,6 +7,7 @@ import supermarket from '@/page/category/supermarket'
 import discover from '@/page/discover/discover'
 import shoppingcart from '@/page/shoppingcart/shoppingcart'
 import mine from '@/page/mine/mine'
+import login from '@/page/login'
 
 Vue.use(Router)
 
@@ -14,8 +15,13 @@ export default new Router({
 	routes: [{ //重定向 进入时默认进入首页
 			path: '/',
 			redirect: {
-				name: 'home'
+				name: 'login'
 			}
+		},
+		{
+			path: '/login',
+			name: 'login',
+			component: login,
 		},
 		{
 			path: '/home',

@@ -1,9 +1,9 @@
 <template>
 	<div class="sn_layout" @mousewheel="scrollToTop">
-		<other-header-bar class="ahead" v-show='!headerBarShow'></other-header-bar>
-		<header-bar class="ahead" v-show='headerBarShow'></header-bar>
+		<other-header-bar class="ahead" v-show='headerBarShow===2?true:false'></other-header-bar>
+		<header-bar class="ahead" v-show='headerBarShow===1?true:false'></header-bar>
 		<router-view class="abody" id="myData"></router-view>
-		<footer-bar class="aft"></footer-bar>
+		<footer-bar class="aft" v-show='headerBarShow!=0?true:false'></footer-bar>
 	</div>
 </template>
 
@@ -63,7 +63,7 @@
 			width: 100%;
 			margin: 0;
 			padding: 0;
-			background-color: #795DA3;
+			/*background-color: #795DA3;*/
 			/*height: 100%;
 			min-height: 46rem;*/
 			/*background-color: hotpink;*/

@@ -1,6 +1,6 @@
 export default {
-	AddCarmum(state,data){
-		state.count=state.count+data;
+	changeheaderBarShow(state,data){
+		state.headerBarShow=data;
 	},
 	changeTopShow(state,data){
 		state.topShow=data;

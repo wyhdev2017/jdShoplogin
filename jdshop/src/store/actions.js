@@ -3,8 +3,17 @@
 import http from 'axios'
 
 export default {
-	addCarmum({commit},num=2){
-		commit("AddCarmum",num)
+	//登录
+	login({commit},user){
+		let result=false;
+		console.log(user.name+"  "+user.password);
+		if(user.name=='admin'&&user.password=='root'){
+			result=true
+		}
+		return result;
+	},
+	changeheaderBarShow({commit},num=0){
+		commit("changeheaderBarShow",num)
 	},
 	changeTopShow({commit},flag){
 		commit("changeTopShow",flag)

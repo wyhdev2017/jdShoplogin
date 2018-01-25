@@ -22,9 +22,10 @@ export default {
   // 保存tabBar中cart标签的位置
   cartPos: {},
   /*************************/
+ //控制首页导航条透明度显示
   topShow:false,
-	//顶部栏是否显示
-  headerBarShow:true,
+	//顶部栏是否显示0:未登录（不显示导航条）1：登录成功首页导航条 2：登录成功其他导航条
+  headerBarShow:0,
   otherHeaderBarTitle:"",
   //顶部滚动条
   
